@@ -21,7 +21,7 @@ async def register(user_in : schema.UserIn, db : Session = Depends(get_db)):
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-    return db_user
+    return db_user 
 
 @router.post("/token", response_model=schema.Token)
 async def login_for_access_token(
