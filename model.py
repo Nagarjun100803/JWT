@@ -5,7 +5,7 @@ from sqlalchemy import Integer, String
 from db import Base
 from schema import UserLevel
 
-class User(Base):
+class User(Base): 
 
     __tablename__ = "users"
 

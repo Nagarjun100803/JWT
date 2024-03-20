@@ -23,7 +23,7 @@ class UserInDBBase(UserBase):
 
 class UserInDB(UserInDBBase):
     hashed_password : str 
-
+ 
 class TokenData(BaseModel):
     username : Optional[str] = None
 

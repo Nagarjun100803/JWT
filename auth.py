@@ -16,7 +16,7 @@ async def get_current_user(token : str = Depends(oauth_scheme), db : Session = D
         detail="Could not validate your credientials",
         headers={"WWW-Authenticate": "Bearer"}
     )
-
+    
     try: 
         payload = jwt.decode(token, security.SECRET_KEY,
                              algorithms=[security.ALGORITHM])

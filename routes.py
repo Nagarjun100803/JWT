@@ -7,7 +7,7 @@ import model, schema, auth, security
 from db import get_db
 
 router = APIRouter()
-
+ 
 @router.post("/register/", response_model=schema.UserInDBBase)
 async def register(user_in : schema.UserIn, db : Session = Depends(get_db)):
     db_user = auth.get_user(db, username=user_in.username)

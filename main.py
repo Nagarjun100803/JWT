@@ -4,7 +4,7 @@ import model
 from db import engine
 from routes import router
 
-app = FastAPI()
+app = FastAPI() 
 
 model.Base.metadata.create_all(bind=engine)
 app.include_router(router)
